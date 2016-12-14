@@ -1,7 +1,6 @@
-== README
+## Your Home on Wheels: Jace and Giddi - Our home on wheels. - Buy, Sell, Adventure with your own home on wheels.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Made by: Mitchell Loar - mitchloar@icloud.com - 
 
 Things you may want to cover:
 
