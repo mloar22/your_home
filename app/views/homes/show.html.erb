@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @home.category %>
+</p>
+
+<p>
+  <strong>Make:</strong>
+  <%= @home.make %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @home.year %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @home.model %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @home.price %>
+</p>
+
+<p>
+  <strong>Discription:</strong>
+  <%= @home.discription %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @home.owner %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @home.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @home.phone %>
+</p>
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>
