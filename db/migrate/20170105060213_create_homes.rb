@@ -9,7 +9,7 @@ class CreateHomes < ActiveRecord::Migration
       t.text :discription
       t.string :owner
       t.string :email
-      t.integer :phone
+      t.integer :phone 
 
       t.timestamps null: false
     end
