@@ -1,0 +1,24 @@
+<h1>Search Results</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+
+<% if @search.search_homes.empty? %>
+  <p>No Records Found</p>
+
+<% else %>
+
+  <% @search.search_homes.each do |c| %>
+    <br>
+    <!-- Values = keywords:string category:string min_price:integer max_price:integer make:string year:integer model:string owner:string -->
+    <div class="div">
+      <h2><%= c.make %></h2>
+      <p>Category: <%= c.category %></p>
+      <p>Price: <%= c.price %></p>
+      <p>Model: <%= c.model %></p>
+      <p>Year: <%= c.year %></p>
+      <p>Owner: <%= c.owner %></p>
+    </div>
+
+    <% end %>
+
+ <% end %>

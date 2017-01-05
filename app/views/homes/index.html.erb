@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Homes index</h1>
+<h1>Listing homes(index)</h1>
+
+<%= form_tag homes_path, :method => 'get' do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<%= link_to "Advanced Search", new_search_path %>
 
 <table>
   <thead>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105060213) do
+ActiveRecord::Schema.define(version: 20170105064605) do
 
   create_table "homes", force: :cascade do |t|
     t.string   "category"
@@ -57,6 +57,19 @@ ActiveRecord::Schema.define(version: 20170105060213) do
     t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "keywords"
+    t.string   "category"
+    t.integer  "min_price"
+    t.integer  "max_price"
+    t.string   "make"
+    t.integer  "year"
+    t.string   "model"
+    t.string   "owner"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

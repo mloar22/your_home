@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 root to: 'homes_tests#index'
+
+resources :searches
 resources :homes
 
   # The priority is based upon order of creation: first created -> highest priority.

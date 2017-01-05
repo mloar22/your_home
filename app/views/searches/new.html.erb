@@ -1,0 +1,46 @@
+<h1>Advanced Search</h1>
+
+<!-- form for advanced search -->
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+
+<!-- Values needed to be searched = keywords:string category:string min_price:integer max_price:integer make:string year:integer model:string owner:string -->
+  <div class="field">
+    <%= s.label :keywords %><br />
+    <%= s.text_field :keywords %>
+  </div>
+
+  <div class="field">
+    <%= s.label :category %><br />
+    <%= s.select :category, options_for_select(@categories), :include_blank => true%>
+  </div>
+
+  <div class="field">
+    <p><%= s.label :min_price, "Min Price" %> - <%= s.text_field :min_price, size: 10 %></p>
+    <p><%= s.label :min_price, "Max Price" %> - <%= s.text_field :max_price, size: 10 %></p>
+  </div>
+
+  <div class="field">
+    <%= s.label :make %><br />
+    <%= s.select :make, options_for_select(@makes), :include_blank => true%>
+  </div>
+
+  <div class="field">
+    <p><%= s.label :year, "Year" %> - <%= s.text_field :year, size: 10%></p>
+  </div>
+
+  <div class="field">
+    <%= s.label :model %><br />
+    <%= s.select :model, options_for_select(@models), :include_blank => true%>
+  </div>
+
+  <div class="field">
+    <%= s.label :owner %><br />
+    <%= s.select :owner, options_for_select(@owners), :include_blank => true%>
+  </div>
+
+  <div class="actions"><%= s.submit "Search", class: "pure-button pure-button-primary" %></div>
+  
+<% end %>
+
+<p><%= link_to 'Back', homes_path %></p>
