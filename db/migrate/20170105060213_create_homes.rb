@@ -9,7 +9,9 @@ class CreateHomes < ActiveRecord::Migration
       t.text :discription
       t.string :owner
       t.string :email
-      t.integer :phone 
+      t.integer :phone
+
+      # need links/handles to social media 
 
       t.timestamps null: false
     end

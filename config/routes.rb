@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-root to: 'homes_tests#index'
+  get 'welcome/homepage'
+
+root to: 'welcome#homepage'
 
 resources :searches
 resources :homes
+resources :welcome
+resources :about
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

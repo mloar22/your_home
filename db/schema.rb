@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20170105064605) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "homes", force: :cascade do |t|
     t.string   "category"
     t.string   "make"
@@ -23,38 +26,6 @@ ActiveRecord::Schema.define(version: 20170105064605) do
     t.string   "owner"
     t.string   "email"
     t.integer  "phone"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "homes_tests", force: :cascade do |t|
-    t.string   "category"
-    t.string   "make"
-    t.integer  "year"
-    t.string   "model"
-    t.integer  "price"
-    t.text     "discription"
-    t.string   "owner"
-    t.string   "email"
-    t.integer  "phone"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "category"
-    t.integer  "year"
-    t.string   "make"
-    t.string   "model"
-    t.integer  "price"
-    t.text     "location"
-    t.string   "facebook"
-    t.string   "instagram"
-    t.string   "twitter"
-    t.text     "description"
-    t.string   "email"
-    t.integer  "phone"
-    t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
