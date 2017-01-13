@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :installs
   get 'welcome/homepage'
 
 root to: 'welcome#homepage'
