@@ -14,7 +14,7 @@ class HomesController < ApplicationController
 
   # GET /homes/new
   def new
-    @home = Home.new
+    @home = current_user.homes.build
   end
 
   # GET /homes/1/edit
@@ -24,7 +24,7 @@ class HomesController < ApplicationController
   # POST /homes
   # POST /homes.json
   def create
-    @home = Home.new(home_params)
+    @home = current_user.homes.build(home_params)
 
     respond_to do |format|
       if @home.save
@@ -69,6 +69,6 @@ class HomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def home_params
-      params.require(:home).permit(:category, :make, :year, :model, :price, :discription, :owner, :email, :phone)
+      params.require(:home).permit(:category, :make, :year, :model, :price, :description, :owner, :email, :phone)
     end
 end

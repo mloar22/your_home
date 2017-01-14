@@ -6,12 +6,12 @@ class CreateHomes < ActiveRecord::Migration
       t.integer :year
       t.string :model
       t.integer :price
-      t.text :discription
+      t.text :description
       t.string :owner
       t.string :email
       t.integer :phone
 
-      # need links/handles to social media 
+      # need links/handles to social media
 
       t.timestamps null: false
     end

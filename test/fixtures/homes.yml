@@ -6,7 +6,7 @@ one:
   year: 1
   model: MyString
   price: 1
-  discription: MyText
+  description: MyText
   owner: MyString
   email: MyString
   phone: 1
@@ -17,7 +17,7 @@ two:
   year: 1
   model: MyString
   price: 1
-  discription: MyText
+  description: MyText
   owner: MyString
   email: MyString
   phone: 1

@@ -18,7 +18,7 @@ class HomesControllerTest < ActionController::TestCase
 
   test "should create home" do
     assert_difference('Home.count') do
-      post :create, home: { category: @home.category, discription: @home.discription, email: @home.email, make: @home.make, model: @home.model, owner: @home.owner, phone: @home.phone, price: @home.price, year: @home.year }
+      post :create, home: { category: @home.category, description: @home.description, email: @home.email, make: @home.make, model: @home.model, owner: @home.owner, phone: @home.phone, price: @home.price, year: @home.year }
     end
 
     assert_redirected_to home_path(assigns(:home))
@@ -35,7 +35,7 @@ class HomesControllerTest < ActionController::TestCase
   end
 
   test "should update home" do
-    patch :update, id: @home, home: { category: @home.category, discription: @home.discription, email: @home.email, make: @home.make, model: @home.model, owner: @home.owner, phone: @home.phone, price: @home.price, year: @home.year }
+    patch :update, id: @home, home: { category: @home.category, description: @home.description, email: @home.email, make: @home.make, model: @home.model, owner: @home.owner, phone: @home.phone, price: @home.price, year: @home.year }
     assert_redirected_to home_path(assigns(:home))
   end
 

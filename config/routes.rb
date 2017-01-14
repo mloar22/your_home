@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :installs
+  devise_for :users
   get 'welcome/homepage'
 
 root to: 'welcome#homepage'
@@ -9,6 +9,12 @@ resources :searches
 resources :homes
 resources :welcome
 resources :about
+
+# REVISIT BELOW - for building out admin pannel
+# namespace :admin do
+#   # get "/dashboard"
+#   resources :homes, only: [:index, :show]
+# end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

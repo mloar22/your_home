@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YourHomeOnWheels</title>
+  <title>Your Home On Wheels</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-
- <h1>Your Home On Wheels</h1>
+        <!-- See ourhomeonwheels.com for logo placement - simple logo always in the top left of the page  -->
+ <h1 class="Logo">Your Home On Wheels</h1>
 <body>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
 <%= yield %>
 </body>
 </html>

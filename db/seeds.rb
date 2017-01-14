@@ -13,7 +13,7 @@ v = Home.create(
   year: 1989,
   model: "test",
   price: 2000,
-  discription: "ue debitis maecenas sed at proin neque. Tincidunt adipiscing dignissim tincidunt enim. Quis augue ac phasellus, aenean lacus ultrices viverra eget donec, felis sed justo, sed nulla proin duis orci. Fusce purus. Congue massa vel, nulla dignissim ornare, ",
+  description: "ue debitis maecenas sed at proin neque. Tincidunt adipiscing dignissim tincidunt enim. Quis augue ac phasellus, aenean lacus ultrices viverra eget donec, felis sed justo, sed nulla proin duis orci. Fusce purus. Congue massa vel, nulla dignissim ornare, ",
   owner:"jim",
   email:"test@test.com",
   phone:123435246
