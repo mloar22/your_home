@@ -2,17 +2,20 @@
 <html>
 <head>
   <title>Your Home On Wheels</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
         <!-- See ourhomeonwheels.com for logo placement - simple logo always in the top left of the page  -->
- <h1 class="Logo">Your Home On Wheels</h1>
-<body>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-
-<%= yield %>
+ <h1 class="Logo">(logo)</h1>
+ <div class="container">
+   <ul class="nav nav-tabs">
+     <li><%= link_to "Welcome", welcome_homepage_path %></li>
+     <li><%= link_to "Las Casas", homes_path %></li>
+     <li><%= link_to "Our Story", about_index_path %></li>
+   </ul>
+ <%= yield %>
+ </div>
 </body>
 </html>

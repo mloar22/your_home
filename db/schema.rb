@@ -28,38 +28,6 @@ ActiveRecord::Schema.define(version: 20170113142744) do
     t.integer  "user_id"
   end
 
-  create_table "homes_tests", force: :cascade do |t|
-    t.string   "category"
-    t.string   "make"
-    t.integer  "year"
-    t.string   "model"
-    t.integer  "price"
-    t.text     "description"
-    t.string   "owner"
-    t.string   "email"
-    t.integer  "phone"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.string   "category"
-    t.integer  "year"
-    t.string   "make"
-    t.string   "model"
-    t.integer  "price"
-    t.text     "location"
-    t.string   "facebook"
-    t.string   "instagram"
-    t.string   "twitter"
-    t.text     "description"
-    t.string   "email"
-    t.integer  "phone"
-    t.string   "name"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "searches", force: :cascade do |t|
     t.string   "keywords"
     t.string   "category"
