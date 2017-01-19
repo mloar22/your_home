@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Home On Wheels</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Your Home on Wheels</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-
-        <!-- See ourhomeonwheels.com for logo placement - simple logo always in the top left of the page  -->
 <body>
-  <header>
- <div class="container">
-   <ul class="nav nav-tabs">
-     <li><%= link_to "Welcome", welcome_homepage_path %></li>
-     <li><%= link_to "Las Casas", homes_path %></li>
-     <li><%= link_to "Our Story", about_index_path %></li>
-     <li><%= link_to "Sign in" %></li>
-   </ul>
-</header>
- <%= yield %>
- </div>
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li><%= link_to "Welcome", welcome_homepage_path %></li>
+            <li><%= link_to "Las Casas", homes_path %></li>
+            <li><%= link_to "Our Story", about_index_path %></li>
+            <li><%= link_to "Sign in" %></li>
+        </ul>
+
+  <%= yield %>
+    </div>
 </body>
 </html>
