@@ -7,14 +7,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
         <!-- See ourhomeonwheels.com for logo placement - simple logo always in the top left of the page  -->
- <h1 class="Logo">(logo)</h1>
+<body>
+  <header>
  <div class="container">
    <ul class="nav nav-tabs">
      <li><%= link_to "Welcome", welcome_homepage_path %></li>
      <li><%= link_to "Las Casas", homes_path %></li>
      <li><%= link_to "Our Story", about_index_path %></li>
+     <li><%= link_to "Sign in" %></li>
    </ul>
+</header>
  <%= yield %>
  </div>
 </body>
