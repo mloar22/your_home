@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
   get 'welcome/homepage'
 
 root to: 'welcome#homepage'
@@ -9,6 +10,7 @@ resources :searches
 resources :homes
 resources :welcome
 resources :about
+
 
 # REVISIT BELOW - for building out admin pannel
 # namespace :admin do

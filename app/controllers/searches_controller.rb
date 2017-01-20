@@ -5,7 +5,6 @@ class SearchesController < ApplicationController
       @categories = Home.uniq.pluck(:category)
       @makes = Home.uniq.pluck(:make)
       @models = Home.uniq.pluck(:model)
-      @owners = Home.uniq.pluck(:owner)
     end
 
     def create
@@ -21,7 +20,7 @@ class SearchesController < ApplicationController
     private
 
     def search_params
-      params.require(:search).permit(:keywords, :category, :min_price, :max_price, :make, :year, :model, :owner)
+      params.require(:search).permit(:keywords, :category, :min_price, :max_price, :make, :year, :model)
     end
 
 

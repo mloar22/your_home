@@ -5,6 +5,7 @@ belongs_to :user
         where(["category LIKE ?","%#{search}%"])
       else
         all
-      end
+      end  
   end
+  default_scope { order('created_at DESC') }
 end
