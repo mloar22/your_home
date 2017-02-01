@@ -1,13 +1,17 @@
+<div class="container">
 <p id="notice"><%= notice %></p>
 
 <h1>Homes</h1>
-
+<div class="container">
 <%= form_tag homes_path, :method => 'get' do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search" %>
 <% end %>
+</div>
 
 <%= link_to "Advanced Search", new_search_path %>
+<br \>
+<%= link_to 'New Home', new_home_path %>
 
 <table>
   <thead>
@@ -18,8 +22,6 @@
       <th>Model</th>
       <th>Price</th>
       <th>Description</th>
-      <!-- <th>Owner</th>
-      <th>Email</th> -->
       <th>User</th>
     </tr>
   </thead>
@@ -29,7 +31,8 @@
       <div class="media-body">
     <% @homes.each do |home| %>
     <small>
-      submitted <%= time_ago_in_words(home.created_at) %> ago by <%= home.user.name %><br>
+      <!-- Need to make the notice show up and dissappear after a time -->
+      <!-- submitted <%= time_ago_in_words(home.created_at) %> ago by <%= home.user.name %><br> -->
     </small>
         <tr>
             <td><%= home.category %></td>

@@ -17,7 +17,7 @@ class HomesController < ApplicationController
     @home = current_user.homes.build
   end
 
-    def create
+  def create
      @home = Home.new(params.require(:home).permit(:category, :make, :year, :model, :price, :description))
      @home.user = current_user
      if @home.save
@@ -27,7 +27,6 @@ class HomesController < ApplicationController
        flash[:error] = "There was an error saving your home. Please try again."
        render :new
      end
-   end
   end
 
   # GET /homes/1/edit
@@ -82,5 +81,6 @@ class HomesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def home_params
-        params.require(:home).permit(:category, :make, :year, :model, :price, :description)
+        params.require(:home).permit(:category, :make, :year, :model, :price, :description, :cover_image_url)
     end
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113142744) do
+ActiveRecord::Schema.define(version: 20170120202244) do
 
   create_table "homes", force: :cascade do |t|
     t.string   "category"
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 20170113142744) do
     t.string   "owner"
     t.string   "email"
     t.integer  "phone"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "user_id"
+    t.string   "cover_image_url"
   end
 
   add_index "homes", ["user_id"], name: "index_homes_on_user_id"

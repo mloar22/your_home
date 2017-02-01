@@ -9,13 +9,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'faker'
- gem 'figaro', '1.0'
+gem 'figaro', '1.0'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-
+gem 'carrierwave', '~> 1.0'
 gem 'devise', '~> 4.2'
 gem 'sdoc', '~> 0.4.0', group: :do
 gem 'bootstrap-sass'
+gem "fog-aws"
 
 group :development, :test do
   gem 'byebug'
